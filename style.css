@@ -1,0 +1,752 @@
+/*ancient_years 0.1
+* Original Design: Emin Özlem
+* As known as "tilqicom" in "b2evo forums" - http://www.tilqi.com
+* No copyrighted material were used and no animal were hurt during the creation of this skin; so feel free to use/distribute it for all purposes.
+
+** Changelog
+* ancient_years 0.2 bug fixes:
+- you wont get a black square floating over your sidebar in below 960px- anymore..
+- google chrome background picture issue fixed
+- graphic tweaks and a few more cosmetic updates
+
+* ancient_years 0.8 bug fixes:
+- fixed 3.x evobar bug.. /caused by the behaviour change in basic.css in b2 3.x series
+- fixed all background issues
+- fixed faux columns
+
+* ancient_years 0.8 improvements:
+- new fonts via css font embed
+- added "Featured posts" feature (see read me) - simply replace  posts.main-3.x.php with posts.main.php
+- many cosmetic updates
+- Replaced so called "credits" with an actual credit link to b2evolution website
+
+* TO DO:
+- fix linked image bg issue
+- new icons
+- review typography
+- even better blending
+- maybe fluid ?
+- something to remove header { overflow:hidden} restriction -that is not to lose blending points
+- add a notable difference for featured posts
+- remove unnecessary "equalizer"s
+*/
+
+/*REMOVED-@import url("../../iefixes/basic.css");	/ Replaced default basic.css with only removing webkit-size... to pass validation*/
+
+body, html, * {
+	margin:0; padding:0;}
+body html {height: 100%; width:100%;}/*reset*/
+
+@font-face {
+ font-family: ageek;
+ src: url("rsc/ageek.eot");} /* EOT file for IE */
+
+@font-face {
+ font-family: diogenes;
+ src: url("rsc/diogenes.eot");} /* EOT file for IE */
+ 
+@font-face {  
+	  font-family: diogenes;  
+	  src: url("rsc/diogenes.ttf") format("truetype");  
+	}  
+@font-face {  
+	  font-family: ageek  ;  
+	  src: url( "rsc/ageek.ttf" ) format("truetype");  
+	}  
+/*fonts for ie*/
+
+
+body {background: url(img/textr.jpg) 0 0;}
+#container {
+font-size: 14px; /* Resets 1em to 10px */
+/*font-family: 'Lucida Sans', Verdana, Arial, Sans-Serif;*/
+color: #442020;
+/*background-color: #000;*/
+letter-spacing: 0.4px;
+font-style: normal;
+font-family: "diogenes", Arial, Verdana, Helvetica;
+margin-bottom: -40px; /*suddenly discovered a weird bug, some white space at the bottom of the page, this is to fix that.. let me know if you cant see the last 40px of your page;*/
+}
+
+
+#content {
+clear: both;
+font-size: 1.1em;
+}
+
+.singlemode .bText p {
+font-size: 1.05em;
+}
+
+.left .bText,
+.singlemode .bText {
+line-height: 1.3em;
+}
+
+.singlemode {
+line-height: 1.4em;
+}
+
+.left .postmetadata {
+text-align: center;
+}
+
+.alt {
+background-color: transparent;
+border-left: 3px solid #990000;
+padding-left: 2px;
+}
+
+#footer {
+background: url('img/foot.gif') no-repeat center;
+height: 120px;
+border: none;
+}
+
+small {
+/*font-family: Arial, Helvetica, Sans-Serif;*/
+font-size: 0.9em;
+line-height: 1.5em;
+}
+
+h1, h2, h3 {
+/*font-family: 'Trebuchet MS', 'Lucida Sans', Verdana, Arial, Sans-Serif;*/
+font-weight: bold;
+}
+
+#container a {background: url(img/rugline.png) bottom repeat-x; }
+#container a:hover {color: #900 !important;}
+/*#container a img {background: none!important; }*/ /*F***ing bug, fix this.*/
+h1 a {background: none !important;}
+
+
+
+h1 {
+font-size: 340%;
+text-align: center;
+font-family: "ageek", Arial, Helvetica, sans-serif;
+}
+
+h2 {
+font-size: 1.6em;
+font-variant: small-caps;
+}
+
+h2.pagetitle {
+font-size: 1.6em;
+}
+
+#sidebar h2 {
+/*font-family: 'Lucida Sans', Verdana, Sans-Serif;*/
+font-size: 1.2em;
+}
+
+h3 {
+font-size: 1.3em;
+}
+
+h1, h1 a, h1 a:hover, h1 a:visited {
+text-decoration: none;
+color: #996633;
+}
+
+h1, h1 a, h1 a:visited,h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+color: #451c15 !important;
+}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+text-decoration: none;
+}
+
+.bText p a:visited {
+color: #b85b5a;
+}
+
+.commentlist li, #commentform input, #commentform textarea {
+font: 0.9em 'Lucida Sans', Verdana, Arial, Sans-Serif;
+}
+
+.commentlist li {
+font-weight: bold;
+}
+
+.commentlist cite, .commentlist cite a {
+font-weight: bold;
+font-style: normal;
+font-size: 1.1em;
+}
+
+.commentlist p {
+font-weight: normal;
+line-height: 1.5em;
+text-transform: none;
+}
+
+#commentform p {
+/*font-family: 'Lucida Sans', Verdana, Arial, Sans-Serif;*/
+}
+
+.commentmetadata {
+font-weight: normal;
+}
+
+#sidebar {
+/*font: 1em 'Lucida Sans', Verdana, Arial, Sans-Serif;*/
+}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+color: #6C5955;
+}
+
+code {
+font: 1.1em 'Courier New', Courier, Fixed;
+}
+
+acronym, abbr, span.caps
+{
+font-size: 0.9em;
+letter-spacing: .07em;
+}
+
+h2 a:hover, h3 a:hover {
+color: #996633;
+text-decoration: none;
+}
+
+#container a {
+color: #74442d;
+text-decoration: none;
+/*font-style: italic;*/
+/*font-weight: bold;*/
+}
+
+/* Main Structure */
+body {
+margin: 0 0 20px 0;
+padding: 0;
+}
+
+#page {
+margin: 0 auto;
+padding: 0;
+width: 960px;
+background: #B48D5D url("img/bgr.gif") repeat-y;
+background-position: right 71px;
+text-align:justify;
+}
+
+#header {
+background: url('img/headz.gif') no-repeat;
+margin: 0 auto;
+padding:0;
+height: 240px;
+width: 982px;
+overflow: hidden;
+}
+
+.left {
+float: left;
+padding-left: 80px;
+margin: 0;
+width: 600px;
+background: url(img/bgll.gif) repeat-y;
+background-position: -10px -65px;/*to make the loop points appear even less*/
+position: relative;
+}
+
+.pagemode {background: url(img/bgll.gif) repeat-y;
+background-position: -11px -65px;/*to make the loop points appear even less*/}
+
+.singlemode {
+padding-left: 100px;
+padding-bottom: 10px;/*to fix firefox3 page-footer 10 px space*/
+margin: 0;
+width: 728px;
+background: #B48D5D url(img/bgll.gif) repeat-y;
+background-position: 0px -65px; /*to make the loop points appear even less*/
+}
+
+.pagemode {
+padding-left: 100px;
+padding-top: 1px; /*to fix firefox3 page-header space*/
+padding-bottom: 10px;/*to fix firefox3 page-footer 10 px space*/
+margin: 0;
+width: 750px;
+}
+
+.post {
+margin: 0 0 40px;
+text-align: justify;
+}
+
+.post hr {
+display: block;
+}
+
+.singlemode .post {
+margin: 0;
+}
+
+.left .postmetadata {
+padding-top: 5px;
+}
+
+.singlemode .postmetadata {
+margin: 0;
+}
+
+.singlemode .smallattachment {
+text-align: center;
+float: left;
+width: 128px;
+}
+
+.singlemode .attachment {
+text-align: center;
+}
+
+.postmetadata {
+clear: left;
+}
+
+.posttags {
+	clear: both;
+	text-align: center;
+	color: #5B5048;
+}
+
+#footer {
+padding: 0;
+margin: 0 auto;
+width: 960px;
+clear: both;
+color: #630;
+}
+
+#footer a {
+	color: #000;
+}
+
+#footer p {
+margin: 0;
+padding: 20px 0;
+text-align: center;
+}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+margin: 0;
+}
+
+h2 {
+margin: 30px 0 0;
+}
+
+h2.pagetitle {
+margin-top: 10px;
+text-align: center;
+}
+
+#sidebar h2 {
+margin: 5px 0 0;
+padding: 0;
+}
+
+h3 {
+padding: 0;
+margin: 30px 0 0;
+}
+
+h3.comments {
+padding: 0;
+margin: 40px auto 20px ;
+}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+padding: 0;
+max-width: 100%;
+}
+
+/*	Using 'class="alignright"' on an image will (who would've
+thought?!) align the image to the right. And using 'class="centered',
+will of course center the image. This is much better than using
+align="center", being much more futureproof (and valid) */
+
+img.centered {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+img.alignright {
+padding: 4px;
+margin: 0 0 2px 7px;
+display: inline;
+}
+
+img.alignleft {
+padding: 4px;
+margin: 0 7px 2px 0;
+display: inline;
+}
+
+.alignright {
+float: right;
+}
+
+.alignleft {
+float: left
+}
+/* End Images */
+
+
+
+/* Begin Lists
+
+Special stylized non-IE bullets
+Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .bText ul {
+margin-left: 0px;
+padding: 0 0 0 30px;
+list-style: none;
+padding-left: 10px;
+text-indent: -10px;
+}
+
+html>body .bText li {
+margin: 7px 0 8px 10px;
+}
+
+.bText ul li:before, #sidebar ul ul li:before {
+content: "\00BB \0020";
+}
+
+.bText ol {
+padding: 0 0 0 35px;
+margin: 0;
+}
+
+.bText ol li {
+margin: 0;
+padding: 0;
+}
+
+.postmetadata ul, .postmetadata li {
+display: inline;
+list-style-type: none;
+list-style-image: none;
+}
+
+#sidebar ul, #sidebar ul ol {
+margin: 0;
+padding: 0;
+}
+
+#sidebar ul li {
+list-style-type: none;
+list-style-image: none;
+margin-bottom: 15px;
+}
+
+#sidebar ul p, #sidebar ul select {
+margin: 5px 0 8px;
+}
+
+#sidebar ul ul, #sidebar ul ol {
+margin: 5px 0 0 10px;
+}
+
+#sidebar ul ul ul, #sidebar ul ol {
+margin: 0 0 0 10px;
+}
+
+ol li, #sidebar ul ol li {
+list-style: decimal outside;
+}
+
+#sidebar ul ul li, #sidebar ul ol li {
+margin: 3px 0 0;
+padding: 0;
+}
+
+#sidebar ul li ul li {
+list-style-type: katakana-iroha;
+list-style-image: none;
+}
+/* End bText Lists */
+
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+padding: 20px 0 10px 0;
+margin-left: 730px;
+width: 190px;
+}
+
+#sidebar form {
+margin: 0;
+}
+
+
+#sidebar .note,
+#sidebar .notes {
+margin-top: 1ex;
+font-size: 100%;
+}
+
+table.bCalendarTable {
+font-size: 100%;
+width: 155px;
+}
+table.bCalendarTable caption {
+font-size: 130%;
+}
+table.bCalendarTable th {
+font-size: 100%;
+}
+
+input.SearchField {
+width: 182px;
+padding: 2px;
+}
+/* End Sidebar */
+
+
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+cursor: help;
+}
+
+acronym, abbr {
+border-bottom: 1px dashed #999;
+}
+
+blockquote {
+margin: 15px 30px 0 10px;
+padding-left: 20px;
+border-left: 5px solid #ddd;
+}
+
+blockquote cite {
+margin: 5px 0 0;
+display: block;
+}
+
+.center {
+text-align: center;
+}
+
+hr {
+display: none;
+}
+
+a img {
+border: none;
+}
+
+.navigation {
+display: block;
+text-align: center;
+margin-top: 10px;
+margin-bottom: 60px;
+}
+/* End Various Tags & Classes*/
+
+
+/* Default styles overriden for this skin: */
+table.prevnext_post {
+width: 100%;
+}
+
+/* Styles for comments */
+div.bComment, /* Entire comment block */
+form.bComment /* New comment form */
+{
+margin: 0;
+padding: 0;
+border: none;
+}
+
+div.moderation_msg
+{
+margin: 1ex 0;
+}
+
+
+/*
+ * Header / blog_list on top:
+ */
+div#header ul {
+float:right;
+list-style-type:none;
+margin: 0;
+padding: 27px 24px;
+}
+div#header li, .blog_list a {
+margin: 0;
+display: inline;
+padding: 0 1ex 0 0;
+}
+div#header li a, .blog_list a {
+/*font-weight: bold;*/
+/*font-style:italic;*/
+color: #2c0f0c;
+}
+div#header li a:hover, .blog_list a:hover {
+color: #653c35;
+text-decoration: none;
+}
+div#header li a.selected, .blog_list a.selected {
+	padding: 2px;
+border: 1px dashed #933;}
+
+
+/* Top menu */
+div.top_menu ul {
+float:left;
+margin: 8px 0 0 24px;
+padding: 0;
+list-style-type:none;
+font-size: 108%;
+}
+div.top_menu_narrow ul {
+}
+div.top_menu li {
+display: inline;
+padding: 0 1em 0 0;
+}
+
+div.top_menu a.selected {
+border: 1px dashed #933;}
+
+.equalize { /*ve been used to make both columns run along with each other*/
+clear: both;
+height: 0px;
+/*overflow: hidden;*/
+/*visibility: hidden;*/
+}
+
+.equalizel { /*ve been used to make both columns run along with each other*/
+clear: both;
+height: 100px;
+/*overflow: hidden;*/
+/*visibility: hidden;*/
+}
+/*Miscallenous additions and final touches*/
+h1, h2, h3, h4, h5, h6, h7 {
+text-transform: capitalize;
+}
+
+.form_textarea_input, .form_text_input {
+background-color: #aa9377;
+/*font-family: "Lucida Sans", Arial, Verdana;*/
+/*font-style:italic;*/
+letter-spacing: 0.6px;
+font-size: 13px;
+color: #512828;
+/*font-weight: bold;*/
+border: 1px dashed #996600;
+}
+
+.notes {
+color: #916D04;
+}
+
+td#bCalendarToday {
+border: 1px solid #993333;
+color: #990000;
+background-color: #b99e7d;
+}
+th.bCalendarHeaderCell {
+color: #996633;
+}
+
+.powered_by a:hover {
+border: none;}
+
+.search .SearchField {
+width: 150px;
+background: transparent;
+border: 1px dashed #933;
+}
+
+.search .SearchField:hover {
+width: 150px;
+background: #996666;
+}
+
+.validators p a:hover {
+border: none;}
+
+
+#pagetopt div.bloglist .widget_core_colls_list_public ul, .blog_list {
+float: left;
+display: inline;
+margin-top: 30px;
+margin-left: 70px;
+}
+.headerwidgets {
+	display: inline;
+	float: left;
+	margin-left: 150px;
+	margin-top: -20px;
+	clear: both;}
+	
+	#page a:hover {
+		text-decoration: none;
+		border: none;}
+		
+#contenti {
+			width: 700px;
+			position: relative;
+			left: 50px;}
+			
+/*			.fakediv {background: red; display:block; height: 100%; overflow: hidden;}*/
+
+a img { background:none !important; }
+
+/*fix faux columns*/
+
+#page {overflow: hidden;}
+
+#sidebar, .left {padding-bottom: 37000px;}
+
+#sidebar, .left {margin-bottom: -37000px;}
+
+.blog_list {	
+	list-style-type:none;
+	margin: 0;
+	padding: 55px 0px 70px 40px;
+}
+.blog_list a {
+	color: rgb(69, 28, 21) !important;
+}
+form.bComment .submit, form.bComment .preview, .compact_search_form .submit, #content .extended_search_form .submit {
+	color: rgb(69, 28, 21);
+	background-color: #eee;
+	border:1px solid #eee !important;
+	cursor: pointer;
+	padding: 3px;
+}
+#content .extended_search_form .submit {
+	margin-left: 3px;
+}
+form.bComment .submit:hover, form.bComment .preview:hover, .compact_search_form .submit:hover, #content .extended_search_form .submit:hover {
+	opacity: 0.8;
+	background-color: #eee;
+	color: rgb(69, 28, 21);
+}
