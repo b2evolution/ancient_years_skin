@@ -62,6 +62,9 @@ $params = array_merge( array(
 	?>
 
 	<?php
+		if( ! $Item->is_intro() )
+		{	// Display only if we're not displaying an intro post:
+	
 		// List all tags attached to this post:
 		$Item->tags( array(
 				'before' =>         '<div class="posttags">'.T_('Tags').': ',
@@ -71,8 +74,6 @@ $params = array_merge( array(
 	?>
 
 	<?php
-		if( ! $Item->is_intro() )
-		{	// Display only if we're not displaying an intro post:
 			?>
 			<p class="postmetadata">
 				<?php
